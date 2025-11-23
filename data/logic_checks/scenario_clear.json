@@ -1,0 +1,60 @@
+{
+  "scenario_id": "clear",
+  "speed_mps": 5.0,
+  "safety_distance_m": 5.0,
+  "drones": [
+    {
+      "id": "primary",
+      "t_start": 0.0,
+      "waypoints": [
+        [
+          0,
+          0,
+          10
+        ],
+        [
+          100,
+          0,
+          10
+        ],
+        [
+          200,
+          0,
+          10
+        ]
+      ]
+    },
+    {
+      "id": "drone_1",
+      "t_start": 0.0,
+      "waypoints": [
+        [
+          0,
+          50,
+          10
+        ],
+        [
+          200,
+          50,
+          10
+        ]
+      ]
+    },
+    {
+      "id": "drone_2",
+      "t_start": 10.0,
+      "waypoints": [
+        [
+          -50,
+          -50,
+          12
+        ],
+        [
+          250,
+          -50,
+          12
+        ]
+      ]
+    }
+  ]
+}

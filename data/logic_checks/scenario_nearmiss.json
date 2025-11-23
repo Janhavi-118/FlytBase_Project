@@ -1,0 +1,39 @@
+{
+  "scenario_id": "nearmiss",
+  "speed_mps": 5.0,
+  "safety_distance_m": 5.0,
+  "drones": [
+    {
+      "id": "primary",
+      "t_start": 0.0,
+      "waypoints": [
+        [
+          0,
+          0,
+          10
+        ],
+        [
+          100,
+          0,
+          10
+        ]
+      ]
+    },
+    {
+      "id": "drone_1",
+      "t_start": 8.0,
+      "waypoints": [
+        [
+          100,
+          1,
+          10
+        ],
+        [
+          0,
+          1,
+          10
+        ]
+      ]
+    }
+  ]
+}
