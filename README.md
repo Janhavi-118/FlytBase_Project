@@ -42,12 +42,14 @@ This architecture remains **transparent, deterministic, and interpretable**—im
 │   └── all_check.py           # Full swarm pairwise conflict evaluation
 │
 ├── data/
+│   ├── 4d_visualize_html
+|   |   └──  ... html visualizations of dataset in 4D (x, y, z, time)
 │   ├── logic_checks
 |   |   └──  ... logic test cases
 │   ├── random_scenarios
 |   |   └──  ... random test cases
 │   └── visualize_html
-|       └──  ... html visualizations of datasets
+|       └──  ... html visualizations of datasets in 3D (x, y, z)
 │
 ├── logic_checks_primary_drone/ # Video results of logic checks
 ├── results_all_drones/         # Video results of random data
@@ -198,6 +200,12 @@ python -m src.all_check data/random_scenarios/<scenario>.json
 python data/visualize_html/visualize_data.py data/random_scenarios/<scenario>.json
 ```
 
+4. To test the 4D dataset visualizer:
+
+```bash
+python data/4d_visualize_html/4d_viz data/random_scenarios/<scenario>.json
+```
+
 ## Visualization Tools
 
 ### A. Strategic Visualization (Animation)
@@ -217,6 +225,16 @@ python data/visualize_html/visualize_data.py data/random_scenarios/<scenario>.js
 ```
 
 Interactive matplotlib plot—rotate, zoom, and inspect path complexity freely.
+
+### C. Dynamic 4D Dataset Viewer
+
+Useful for inspecting moving trajectories with animation but no collision logic:
+
+```bash
+python data/4d_visualize_html/4d_viz data/random_scenarios/<scenario>.json
+```
+
+Interactive matplotlib plot—rotate, zoom, and inspect movement complexity freely.
 
 ## Creating New Scenarios
 
