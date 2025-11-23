@@ -13,7 +13,7 @@ def seg_seg_closest_points(a0, a1, b0, b1):
     e = np.dot(v,w0)
     D = a*c - b*b
     if D < EPS:
-        # parallel-ish: fallback to endpoint projections
+        # parallel: fallback to endpoint projections
         cand = []
         for pt in [a0, a1]:
             ub = np.dot(v, pt - b0) / (c + 1e-9)

@@ -37,7 +37,7 @@ def make_animation(filename, all_trajs, conflicts, t_start, t_end, dt=0.1, fps=1
         m, = ax.plot([], [], [], 'o', color=color, markersize=6)
         markers[id_] = m
 
-    # conflict markers (persistent)
+    # conflict markers
     conflict_artists = []
     for c in conflicts:
         cm, = ax.plot([], [], [], 'o', color='red', markersize=9, alpha=0.9)
@@ -60,7 +60,7 @@ def make_animation(filename, all_trajs, conflicts, t_start, t_end, dt=0.1, fps=1
             markers[id_].set_data([pos[0]], [pos[1]])
             markers[id_].set_3d_properties([pos[2]])
 
-        # update conflict markers (persistent)
+        # update conflict markers
         for (c, art) in conflict_artists:
             tconf = c['time']
             if t >= tconf - dt/2:
