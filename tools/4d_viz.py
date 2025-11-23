@@ -72,7 +72,7 @@ def plot_interactive_4d(scen_path, dt=0.2):
     fig.frames = frames
 
     fig.update_layout(
-        title=f"4D Trajectory Viewer — {scen.get('scenario_id','scenario')}",
+        title=f"4D Trajectory Viewer - {scen.get('scenario_id','scenario')}",
         scene=dict(
             xaxis_title='X', yaxis_title='Y', zaxis_title='Z',
             aspectmode='data'
