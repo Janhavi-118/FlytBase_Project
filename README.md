@@ -13,6 +13,9 @@ The pipeline integrates:
 - **3D visualization** with persistent conflict markers and time-based animation
 - **Modular architecture** that remains transparent, deterministic, and interpretable
 
+![UAV Trajectories Example](assets/original_trajectories.png)
+![Conflict Points](assets/collision_detected.png)
+
 ## Motivation and Approach
 
 Conflict detection in multi-UAV environments often suffers from two extremes:
