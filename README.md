@@ -136,7 +136,7 @@ pip install numpy matplotlib
 #### Primary vs Others Mode
 
 ```bash
-python -m src.main data/<scenario>.json
+python -m src.main data/random_scenarios/<scenario>.json
 ```
 
 This evaluates the first drone (primary) against all others.
@@ -144,7 +144,7 @@ This evaluates the first drone (primary) against all others.
 #### All-vs-All Mode (Full Swarm)
 
 ```bash
-python -m src.all_check data/<scenario>.json
+python -m src.all_check data/random_scenarios/<scenario>.json
 ```
 
 This evaluates all drones pairwise. **Output includes:**
