@@ -30,7 +30,7 @@ def compute_conflicts(drones, safety, dt, primary_id=None):
 def run_scenario(path, dt=0.1, primary_id=None, render_video=True):
     scen = load_scenario(path)
     speed = scen.get('speed_mps', 5.0)
-    safety = scen.get('safety_distance_m', 5.0)
+    safety = scen.get('safety_distance_m', 2.0)
 
     drones = []
     for d in scen['drones']:
