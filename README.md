@@ -37,13 +37,15 @@ This architecture remains **transparent, deterministic, and interpretable**—im
 ```
 .
 ├── src/
-│   ├── trajectory.py          # Trajectory segmentation + position interpolation
-│   ├── collision_check.py     # Geometric filter + analytic closest-approach logic
-│   ├── geofilter.py           # Geometric utility functions
-│   ├── visualize.py           # 3D visualization with persistent conflict markers
 │   ├── main.py                # Primary-vs-others deconfliction pipeline
 │   └── all_check.py           # Full swarm pairwise conflict evaluation
 │
+├── lib/
+│   ├── trajectory.py          # Trajectory segmentation + position interpolation
+│   ├── collision_check.py     # Geometric filter + analytic closest-approach logic
+│   ├── geofilter.py           # Geometric utility functions
+│   └── visualize.py           # 3D visualization with persistent conflict markers
+|
 ├── data/
 │   ├── 4d_visualize_html
 |   |   └──  ... html visualizations of dataset in 4D (x, y, z, time)
@@ -231,7 +233,7 @@ Interactive matplotlib plot—rotate, zoom, and inspect path complexity freely.
 
 ### C. Dynamic 4D Dataset Viewer
 
-Useful for inspecting moving trajectories with animation but no collision logic:
+Useful for inspecting moving trajectories with animation and collision logic:
 
 ```bash
 python data/4d_visualize_html/4d_viz data/random_scenarios/<scenario>.json

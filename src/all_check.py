@@ -1,8 +1,8 @@
 import json, sys
 from pathlib import Path
-from src.trajectory import segments_from_waypoints
-from src.collision_check import simple_deconflict_pipeline
-from src.visualize import make_animation
+from lib.trajectory import segments_from_waypoints
+from lib.collision_check import simple_deconflict_pipeline
+from lib.visualize import make_animation
 
 def load_scenario(path):
     with open(path, "r") as f:
@@ -92,6 +92,6 @@ def run(scenario_path):
 
 if __name__ == "__main__":
     if len(sys.argv) < 2:
-        print("Usage: python -m src.all_vs_all_check data/<scenario>.json")
+        print("Usage: python -m src.all_check data/random_scenarios/<scenario>.json")
         sys.exit(0)
     run(sys.argv[1])
